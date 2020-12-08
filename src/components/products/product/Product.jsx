@@ -19,9 +19,9 @@ const Product = ({product}) => {
                         {product.price}
                     </Typography>
                 </div>
-                <Typography variant="h5" color="textSecondary">
+                <Typography variant="body2" color="textSecondary">
                         {product.description}
-                    </Typography>
+                </Typography>
             </CardContent>
             <CardActions disableSpacing className={classes.cardActions}>
                 <IconButton aria-label="Add to cart">
