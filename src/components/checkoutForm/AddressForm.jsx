@@ -12,11 +12,11 @@ const AddressForm = ({checkoutToken}) =>{
     const [shippingOptions, setShippingOptions] = useState([]);
     const [shippingOption, setShippingOption] = useState('');
 
-    
     const contries = Object.entries(shippingCountries).map(([code, name]) => ({id: code, label:name}));
 
-    function fetchShippingCountries(checkoutTokenId) {
+     fetchShippingCountries = async(checkoutTokenId) => {
         const { contries } = await commerce.localeListShippingCountries(checkoutTokenId);
+        
         setShippingCountries(contries);
         setShippingCountry(Object.keys(contries)[0]);
 
